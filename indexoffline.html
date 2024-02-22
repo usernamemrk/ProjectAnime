@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <title>ProjectAnime</title>
+        <link rel="icon" href="personagemlogo.jpeg" type="image/jpeg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styleoffline.css">
+    </head>
+    <body>
+        <header>
+            <nav> 
+                <a id="logo" href="index.html">ProjectAnime</a>
+                <div class="menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-list">
+                        <li><a class="a" href="index.html"><button>Home</button></a></li>
+                        <li><a class="a" href="animes.html"><button>Animes</button></a></li>
+                        <li><a class="a" href=""><button>/</button></a></li>
+                        <li><a class="a" href=""><button>/</button></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+           <div class="offline-conteiner">
+                <div class="offline-msg">
+                    <div class="offlineimage">
+                        <img src="naruto-ramen-.jpg" alt="naruto">
+                    </div>
+                    <h4>"Believe it! Parece que a conexão sumiu, amigo. Estamos offline, 
+                        mas não se preocupe, assim como eu nunca desisto dos meus sonhos, 
+                        você também pode tentar novamente quando a internet voltar, dattebayo!" 🍥🍃</h4>
+                    <button id="btrec"><h5>Reconectar</h5></button>
+                </div>
+           </div>
+        </main>
+        <script src="NavBar.js"></script>
+        <script src="Nav.js"></script>
+        <script>
+            function checkInternetConnectionAndRedirect() {
+                var online = navigator.onLine; // Verifica o status de conexão
+
+                if (online) {
+                    // Se a conexão estiver disponível, redirecione para a página inicial
+                    window.location.href = 'index.html';
+                } else {
+                    // Se não houver conexão, mostre um toast ou mensagem de erro
+                    alert('Você ainda está offline. Verifique sua conexão com a internet.');
+                }
+            }
+
+                // Adicione um ouvinte de evento ao botão para chamar a função quando clicado
+                document.getElementById('btrec').addEventListener('click', checkInternetConnectionAndRedirect);
+        </script>
+    </body>
+</html>

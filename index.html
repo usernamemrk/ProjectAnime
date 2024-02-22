@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <title>ProjectAnime</title>
+        <link rel="icon" href="personagemlogo.jpeg" type="image/jpeg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /* Estilos para o pop-up */
+            .popup-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+            }
+    
+            .popup-content {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                text-align: center;
+            }
+    
+            .button-container {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+    
+            .continue-button {
+                padding: 10px 20px;
+                margin: 0 10px;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+    
+            .continue-button {
+                background-color: #00cc00;
+                color: #fff;
+            }
+
+            .personagemlogo img {
+            width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+            border-radius: 50%;
+            margin-bottom: 20px;
+            }
+
+            .separar {
+            margin: 20px 0;
+            border-bottom: 1px solid #ccc;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            }
+
+            .alerta{
+                color: darkgray;
+                font-size: small;
+            }
+            
+        @media screen and (max-width: 800px) {
+            .popup-content {
+                padding: 10px;
+            }
+
+            .funny-character img {
+                width: 150px;
+            }
+
+            .separator {
+                width: 90%;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav> 
+                <a id="logo" href="index.html">ProjectAnime</a>
+                <div class="menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-list">
+                        <li><a class="a" href="index.html"><button>Home</button></a></li>
+                        <li><a class="a" href="animes.html"><button>Animes</button></a></li>
+                        <li><a class="a" href=""><button>/</button></a></li>
+                        <li><a class="a" href=""><button>/</button></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="box">
+                <div class="content">
+                    <div class="slides">
+                        <input class="input" type="radio" name="slide" id="slide1" checked>
+                        <input class="input" type="radio" name="slide" id="slide2">
+                        <input class="input" type="radio" name="slide" id="slide3">
+                        <input class="input" type="radio" name="slide" id="slide4">
+
+                        <div class="slide s1">
+                            <img src="1143241.jpg" alt="Naruto em pé fazendo uma pose com o braço erguido e o punho cerrado">
+                        </div>
+                        <div class="slide s2">
+                            <img src="1309248.jpeg" alt="Lufy e sua tripulação">
+                        </div>
+                        <div class="slide s3">
+                            <img src="bleachthousand.jpg" alt="Goku fazendo kamekamehaa">
+                        </div>
+                        <div class="slide s4">
+                            <img src="1319312.jpeg" alt="Jujutsu Kaisen wallpaper">
+                        </div>
+                    </div>
+
+                    <div class="navegation">
+                        <label class="bar" for="slide1"></label>
+                        <label class="bar" for="slide2"></label>
+                        <label class="bar" for="slide3"></label>
+                        <label class="bar" for="slide4"></label>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <br>
+            <h1>New Animes</h1>
+            <br>
+            <div class="container2">
+                <div class="wrapper">
+                    <div class="animes">
+                        <div class="item  current-item">
+                            <img  src="The-Legend-of-Vox-Machina-Episode-13-Release-Date.jpg" alt="The Legend Of Vox Machina">
+                        <div class="animeinfo">
+                          <h2>The Legend of Vox Machina</h2>
+                          <p>A série acompanha os Vox Machina, um grupo de mercenários desajustados que acaba esbarrando no papel de heróis que precisam salvar o reino de uma ameaça terrível e desconhecida, é uma fantasia cheia de ação, aventura e comédia para adultos, o Vox Machina, é um grupo composto por sete personagens.</p>
+                          <a href="voxMachina.html"><button class="button-assistir">Assistir</button></a>
+                        </div>
+                      </div>
+
+                      <div class="item  current-item">
+                        <img src="noblesseimage.jpg" alt="noblesse">
+                      <div class="animeinfo">
+                        <h2>Noblesse</h2>
+                        <p>Raizel desperta de seu sono de 820 anos. Ele é um nobre de sangue-puro que carrega o distinto título de Noblesse, protetor da nobreza. Para tentar proteger Raizel, seu servo Frankenstein o matricula no Colégio Ye Ran, onde Raizel se familiariza com a rotina simples e cotidiana do mundo humano e seus colegas.</p>
+                        <a href="noblesse.html"><button class="button-assistir">Assistir</button></a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="item  current-item">
+                        <img src="MASHLE MAGIA E MÚSCULOS image.jpg" alt="mashle magic and muscle">
+                      <div class="animeinfo">
+                        <h2>Mashle: Magic and Muscles</h2>
+                        <p>Em um mundo onde todos são capazes de usar magia, há uma floresta densa e escura, onde um jovem treina sem parar. Seu nome é Mash Burnedead, e ele guarda um segredo: ele não sabe usar magia. Tudo o que ele queria era levar uma vida tranquila com seu avô, mas a sociedade mágica não tolera não-usuários - e para escapar do perigo, ele acaba se matriculando na Escola de Magia.</p>
+                        <a href="mashlemagicandmusclepage.html"><button class="button-assistir">Assistir</button></a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="item  current-item">
+                        <img src="jujutsukaisen.jpg" alt="Jujutsu Kaisen wallpaper">
+                      <div class="animeinfo">
+                        <h2>Jujutsu Kaisen</h2>
+                        <p>Jujutsu Kaisen é um anime que se passa em um mundo onde maldições, espíritos e feitiçarias são reais e causam terríveis acidentes. O protagonista é Yuji Itadori, um gênio do atletismo que se envolve com o dedo de Ryomen Sukuna, o rei das maldições, e se torna alvo de exorcistas e maldições.</p>
+                        <button class="button-assistir">Assistir</button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="item  current-item">
+                        <img src="boji.jpg" alt="Boji e seu amigo em um campo">
+                      <div class="animeinfo">
+                        <h2>Ōsama Ranking</h2>
+                        <p>usama Ranking Bojji é um príncipe surdo a quem falta poder e habilidade de empunhar a espada. Ele também é o herdeiro do trono e tem grandes esperanças para seu futuro. Depois de encontrar um amigo na sombra Kage, Bojji embarca em sua grande aventura para se tornar o maior rei que o mundo já viu.</p>
+                        <a href="ousamarankingpage.html"><button class="button-assistir">Assistir</button></a>
+                        </div>
+                    </div>
+
+                    <div class="item  current-item">
+                        <img src="eminence.jpg" alt="I am ATOMIC">
+                      <div class="animeinfo">
+                        <h2>The Eminence In Shadow</h2>
+                        <p>The Eminence in Shadow é um anime que conta a história de um garoto no Japão moderno que deseja ser um gênio que exerce poder das sombras. Ele renasce em um mundo de fantasia como Cid Kagenou, onde mantém uma aparência perfeitamente medíocre para não se destacar e perseguir seu sonho de manipular das sombras.</p>
+                        <button class="button-assistir">Assistir</button>
+                        </div>
+                    </div>
+
+                    <div class="item  current-item">
+                        <img src="bleachthousand.jpg" alt="capa bleach novo arco">
+                      <div class="animeinfo">
+                        <h2>Bleach</h2>
+                        <p>Bleach segue as aventuras de Ichigo Kurosaki que após ganhar os poderes de um Ceifeiro de Almas, através de uma Ceifeira de Almas, Rukia Kuchiki. Com os seus novos poderes, Ichigo é forçado a assumir o dever de guiar almas boas ao mundo pós-vida à Soul Society, e derrotar os Hollows (monstros espirituais malignos) que tentam devorá-las.</p>
+                        <a href="bleach.html"><button class="button-assistir">Assistir</button></a>
+                        </div>
+                    </div>
+
+                    <div class="item  current-item">
+                        <img src="towerofgod.jpg" alt="Ban com a espada">
+                      <div class="animeinfo">
+                        <h2>Tower Of Fantasy</h2>
+                        <p>Adaptação da webcomic de Lee Jong-hui (SIU). Tower of God é uma história que fala sobre Baam, um menino que passa a maior parte de sua vida preso debaixo de uma torre, tendo a menina Rachel como a sua única companhia. Um dia Rachel decide que não pode mais ficar presa nessa mesma vida de sempre.</p>
+                        <button class="button-assistir">Assistir</button>
+                        </div>
+                    </div>
+
+                    <div class="item  current-item">
+                        <img src="swordartonline.jpg" alt="Kirito de costa">
+                      <div class="animeinfo">
+                        <h2>Sword Art Online</h2>
+                        <p>Kazuto "Kirito" Kirigaya é um jovem corajoso e apaixonado pelo mundo dos games. Quando surge um jogo de realidade virtual chamado Sword Art Online, capaz de afetar para sempre a vida de seus jogadores, ele decide usar suas habilidades para vencer todas as fases do programa.</p>
+                        <button class="button-assistir">Assistir</button>
+                        </div>
+                    </div>
+
+                    <div class="item  current-item">
+                        <img src="gundam.jpg" alt="Barbatos eliminando a12">
+                      <div class="animeinfo">
+                        <h2>Mobile Suit Gundam: Hathaway</h2>
+                        <p>Não recomendado para menores de 18 anos Depois da rebelião de Char, Hathaway Noa (Kenshô Ono), ainda está traumatizado por todo mal que cometeu. Ele acaba se juntando a um grupo terrorista chamado Mufti e adota o codinome "Mufti Nabiyy Erin". Junto a esse novo grupo, ele segue lutando contra a Federação da Terra.</p>
+                        <a href="mobilesuitHathaway.html"><button class="button-assistir">Assistir</button></a>
+                        </div>
+                    </div>
+
+                    <div class="item  current-item">
+                        <img src="asta.jpg" alt="Asta empunhando sua espada">
+                      <div class="animeinfo">
+                        <h2>Black Clover: Sword of the Wizard King</h2>
+                        <p>Em Black Clover: A Espada do Rei Mago, Asta nasceu em um mundo mágico, e tudo aqui gira em torno da magia. Infelizmente, ele nasceu sem poderes mágicos. Mas isso não o impede de se tornar um Rei Mago. Tudo o que ele precisa fazer é superar todas as adversidades, provar seu poder e manter um juramento com seus amigos.</p>
+                        <a href="blackclovermahouteinoken.html"><button class="button-assistir">Assistir</button></a>
+                      </div>
+                    </div>
+
+                        <div class="navegation2">
+                            <button class="arrow-left control" aria-label="previous image"><b><</b></button>
+                            <button class="arrow-right control" aria-label="next image"><b>></b></button>
+                        </div>
+                </div>
+            </div>
+        </footer>
+        <div class="popup-container">
+            <div class="popup-content">
+                <div class="personagemlogo">
+                    <img src="personagemlogo.jpeg" alt="Personagem Logo">
+                </div>
+                <h2>Bem-vindo ao nosso site de anime!</h2>
+                <p>Confira as últimas novidades e descubra novas séries emocionantes.</p>
+                <p>Clique no botão abaixo para começar a explorar ou feche este pop-up para continuar navegando.</p>
+                <div class="separar"></div>
+                <p class="alerta">A Web page/App ProjectAnime é um projeto educacional, lembrando que não hospedamos</p>
+                <p class="alerta">nada em nossos servidores, apenas os indexamos.</p>
+                <div class="button-container">
+                    <button class="continue-button">Continuar</button>
+                </div>
+            </div>
+        </div>
+        <i id="quadro-icon" class="fas fa-border-all"></i>
+        <button id="toggle-player" class="music-icon"><i class="fas fa-compact-disc"></i></button>
+        <div class="player">
+            <div class="wrapper-player">
+                <div class="details">
+                    <div class="now-playing">PLAYING x OF y</div>
+                    <div class="track-art"></div>
+                    <div class="track-name">Track Name</div>
+                    <div class="track-artist">Track Artist</div>
+                </div>
+     
+                <div class="slider_container">
+                    <div class="current-time">00:00</div>
+                     <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                     <div class="total-duration">00:00</div>
+                </div>
+     
+                <div class="slider_container">
+                    <i class="fa fa-volume-down"></i>
+                     <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                     <i class="fa fa-volume-up"></i>
+                </div>
+     
+                <div class="buttons">
+                    <div class="random-track" onclick="randomTrack()">
+                        <i class="fas fa-random fa-2x" title="random"></i>
+                    </div>
+                    <div class="prev-track" onclick="prevTrack()">
+                         <i class="fa fa-step-backward fa-2x"></i>
+                     </div>
+                     <div class="playpause-track" onclick="playpauseTrack()">
+                         <i class="fa fa-play-circle fa-5x"></i>
+                     </div>
+                     <div class="next-track" onclick="nextTrack()">
+                         <i class="fa fa-step-forward fa-2x"></i>
+                     </div>
+                     <div class="repeat-track" onclick="repeatTrack()">
+                         <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                     </div>
+                </div>
+     
+                 <div id="wave">
+                     <span class="stroke"></span>
+                     <span class="stroke"></span>
+                     <span class="stroke"></span>
+                     <span class="stroke"></span>
+                     <span class="stroke"></span>
+                     <span class="stroke"></span>
+                     <span class="stroke"></span>
+                 </div>  
+            </div>
+        </div>
+        <div id="quadro-anuncio" class="anime-advertisement">
+            <img src="https://yt3.ggpht.com/a/AGF-l79RCicljPpyu20rD3mAbHJDipEedWChB5-OZQ=s900-c-k-c0xffffffff-no-rj-mo" alt="Personagem de Anime">
+            <h3>Novos Animes</h3>
+            <p>
+              Mashle: Magic and Muscle,<br>
+              Noblesse,<br>
+              Black Clover: Mahou Tei no Ken,<br>
+              Mobile Suit Gundam: Hathaway,<br>
+              Bleach TYBW,<br>
+              Osama Ranking
+            </p>
+            <h3>Novas Mecânicas</h3>
+            <p>
+              Player de Música,<br>
+              Quadro de Notícias,<br>
+              Design Melhorado
+            </p>
+            <div class="character-thumb">
+              <img src="https://th.bing.com/th/id/R.412a5ea07f9c5d1df254d0a6bffc43cb?rik=5FbaH3Ve3kMyiw&riu=http%3a%2f%2f4.bp.blogspot.com%2f-WrqxztKbQek%2fTlOXtN-BE-I%2fAAAAAAAACE0%2fHVmTB5Le8jc%2fs1600%2f125722428056.jpg&ehk=ZpPEAWEyS5mHDpHqdzxKepWLj81uhnHIP%2bEOJ%2foDAoY%3d&risl=&pid=ImgRaw&r=0" alt="Personagem fazendo joinha">
+            </div>
+          </div>         
+        <script>
+            // Fechar o pop-up ao clicar no botão "Fechar"
+            var closeButton = document.querySelector('.continue-button');
+            var popupContainer = document.querySelector('.popup-container');
+    
+            closeButton.addEventListener('click', function() {
+                popupContainer.style.display = 'none';
+            });
+        </script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registrado com sucesso:', registration);
+                    })
+                    .catch(error => {
+                        console.log('Falha ao registrar o Service Worker:', error);
+                    });
+            }
+        </script>
+        <script src="NavBar.js"></script>
+        <script src="Nav.js"></script>
+        <script src="scriptmusic.js"></script>
+        <script src="quadro.js"></script>
+        <script src="service-worker.js"></script>
+        <script>
+            // Função para verificar a conexão com a internet
+            function checkInternetConnection() {
+                var online = navigator.onLine; // Verifica o status de conexão
+
+                if (!online) {
+                    // Redireciona o usuário para a página offline se estiver offline
+                    window.location.href = 'indexoffline.html';
+                }
+            }
+
+                // Verifica a conexão ao carregar a página
+                window.addEventListener('load', checkInternetConnection);
+
+                // Verifica a conexão periodicamente (opcional)
+                setInterval(checkInternetConnection, 5000); // Verifica a cada 5 segundos (ajuste conforme necessário)
+        </script>
+    </body>
+</html>

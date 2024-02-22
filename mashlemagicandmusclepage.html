@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <title>ProjectAnime</title>
+        <link rel="icon" href="personagemlogo.jpeg" type="image/jpeg">
+        <link rel="stylesheet" href="styleep.css">
+    </head>
+    <body>
+        <header>
+            <nav> 
+                <a id="logo" href="index.html">ProjectAnime</a>
+                <div class="menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-list">
+                        <li><a href="index.html"><button>Home</button></a></li>
+                        <li><a href="animes.html"><button>Animes</button></a></li>
+                        <li><a href=""><button>/</button></a></li>
+                        <li><a href=""><button>/</button></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="capa" style="display: inline-block; vertical-align: top;">
+                <img class="capaimage" src="Mashle_Anime_capa.jpg" alt="capa mashle magic and muscle">   
+            </div>
+            <div id="capap" style="display: inline-block;">
+                <h1>Sinopse</h1>
+                <p>Em um mundo onde todos são capazes de usar magia, há uma floresta densa e escura, onde um jovem treina sem parar. Seu nome é Mash Burnedead, e ele guarda um segredo: ele não sabe usar magia. Seu objetivo? Tornar-se um Visionário Divino de elite.</p>
+            </div>
+            <div id="assistir">
+                <a href="mashlemagicandmuscleplayer.html">
+                    <button id="iniciar"><h5>Assistir</h5></button>
+                </a>
+            </div>
+        </main>
+        <script src="NavBar.js"></script>
+        <script src="service-worker.js"></script>
+        <script>
+            // Função para verificar a conexão com a internet
+            function checkInternetConnection() {
+                var online = navigator.onLine; // Verifica o status de conexão
+
+                if (!online) {
+                    // Redireciona o usuário para a página offline se estiver offline
+                    window.location.href = 'indexoffline.html';
+                }
+            }
+
+                // Verifica a conexão ao carregar a página
+                window.addEventListener('load', checkInternetConnection);
+
+                // Verifica a conexão periodicamente (opcional)
+                setInterval(checkInternetConnection, 5000); // Verifica a cada 5 segundos (ajuste conforme necessário)
+        </script>
+    </body>
+</html>

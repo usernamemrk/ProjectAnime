@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, 
+    -apple-system, Helvetica, Arial, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.a {
+    color: #23232e;
+    text-decoration: none;
+}
+
+.a button{
+    position: relative;
+    height: 40px;
+    width: 200px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #23232e;
+    font-size: 18px;
+}
+
+.a button:first-child:hover{
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    transition: 0.3s;
+}
+
+.a button:first-child:before{
+    content:'';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    left: -5px;
+    bottom: -5px;
+    border-radius: 50px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.a button:first-child:hover:before{
+    opacity: 1;
+    z-index: -1;
+}
+
+.a button:hover{
+    z-index: 1;
+    animation: glow 10s linear infinite;
+}
+
+@keyframes glow {
+    0%{
+        background-position: 0%;
+    }
+    25%{
+        background-position: 100%;
+    }
+    50%{
+        background-position: 200%;
+    }
+    75%{
+        background-position: 300%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+
+#logo {
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    25%{
+        background-position: 100%;
+    }
+    50%{
+        background-position: 200%;
+    }
+    75%{
+        background-position: 300%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, 
+    -apple-system, Helvetica, Arial, sans-serif;
+    background: #fff ;
+    height: 8vh;
+    width: 100vw;
+    z-index: 4;
+}
+
+.nav-list {
+    z-index: 3;
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.menu{
+    display: none;
+    cursor: pointer;
+}
+
+.menu div{
+    width: 32px;
+    height: 2px;
+    background: #23232e;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 2000px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: 0.3s ease-in;
+    }
+    .nav-list li{
+        margin-left: 0;
+        opacity: 1;
+    }
+    .menu{
+        display: block;
+    }
+}
+
+.nav-list.active{
+    transform: translateX(0);
+}
+
+.menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.menu.active .line2{
+    opacity: 0;
+}
+
+.menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+main{
+    background-image: url("wp2301700-anime-4k-wallpapers.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+    height: 94.5vh;
+}
+
+.offline-conteiner {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 10%;
+    height: 400px;
+}
+
+.offline-msg {
+    text-align: center;
+}
+
+.offline-msg img {
+    margin-top: 10px;
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+.offline-msg h4 {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#btrec {
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: animate 10s linear infinite;
+    margin-top: 20px;
+}
+
+#btrec h5{
+    font-size: 15px;
+}
+
+#btrec:hover {
+    transform: scale(1.1);
+    transition: ease-in 0.2s;
+}
+
+@media screen and (max-width: 800px) {
+
+    .a button{
+        position: relative;
+        height: 40px;
+        width: 170px;
+        border-radius: 50px;
+        border: none;
+        outline: none;
+        background: #fff;
+        color: #23232e;
+        font-size: 18px;
+    }
+
+    .offline-conteiner {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        max-width: 80%; /* Reduzindo a largura máxima para telas menores */
+        margin: 0 auto;
+        margin-top: 40%;
+        height: auto; /* Tornando a altura adaptativa */
+    }
+
+    .offline-msg img {
+        margin-top: 10px;
+        max-width: 200px; /* Reduzindo o tamanho da imagem para telas menores */
+        border-radius: 50%;
+    }
+
+    .offline-msg h4 {
+        font-size: 16px; /* Reduzindo o tamanho do texto para telas menores */
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    #btrec {
+        padding: 10px 16px; /* Ajustando o tamanho do botão */
+        margin-top: 20px;
+    }
+
+    #btrec h5 {
+        font-size: 14px; /* Reduzindo o tamanho do texto do botão para telas menores */
+    }
+}
